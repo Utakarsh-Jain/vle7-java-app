@@ -9,7 +9,7 @@ public class HelloWorld {
         );
 
         server.createContext("/", exchange -> {
-            String response = "Hello from VLE-7 CI/CD Pipeline! "
+            String response = "Hello from VLE-7 CI/CD Pipeline - Version 2! "
                 + "Application deployed successfully using Kubernetes.";
 
             exchange.sendResponseHeaders(200, response.length());

@@ -24,6 +24,7 @@ pipeline {
             steps {
                 sh 'sudo -u ubuntu minikube kubectl -- apply -f k8s/deployment.yaml'
                 sh 'sudo -u ubuntu minikube kubectl -- apply -f k8s/service.yaml'
+                sh 'sudo -u ubuntu minikube kubectl -- rollout restart deployment/java-app'
             }
         }
 

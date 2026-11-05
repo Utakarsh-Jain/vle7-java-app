@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY HelloWorld.java .
 
-RUN javac HelloWorld.java
+RUN javac --add-modules jdk.httpserver HelloWorld.java
 
-CMD ["java", "HelloWorld"]
+EXPOSE 8080
+
+CMD ["java", "--add-modules", "jdk.httpserver", "HelloWorld"]
